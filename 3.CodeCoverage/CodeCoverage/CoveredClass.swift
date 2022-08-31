@@ -8,18 +8,18 @@ class CoveredClass {
             return x
         }
     }
-    
+
     static func commaSeparated(from: Int, to: Int) -> String {
         var result = ""
-        for i in from..<to {
+        for i in from ..< to {
             result += "\(i),"
         }
         result += "\(to)"
         return result
     }
-    
+
     private(set) var area: Int
-    
+
     var width: Int {
         didSet {
             area = width * width
@@ -27,18 +27,17 @@ class CoveredClass {
             drawSquare(width: width, color: color)
         }
     }
-    
+
     init() {
         width = 0
         area = 0
     }
-    
+
     private func redOrGreen(for width: Int) -> UIColor {
         width % 2 == 0 ? .red : .green
     }
-    
-    private func drawSquare(width: Int, color: UIColor) {
+
+    private func drawSquare(width _: Int, color _: UIColor) {
         // ...
     }
-    
 }

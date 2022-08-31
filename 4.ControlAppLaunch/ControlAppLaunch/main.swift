@@ -6,4 +6,5 @@ UIApplicationMain(
     CommandLine.argc,
     CommandLine.unsafeArgv,
     nil,
-    NSStringFromClass(appDelegateClass))
+    NSStringFromClass(appDelegateClass)
+)

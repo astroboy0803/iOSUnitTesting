@@ -1,13 +1,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet private(set) var button: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction private func buttonTap() {
         let alert = UIAlertController(title: "Do the Thing?", message: "Let us know if you want to do the thing.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -20,4 +19,3 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-

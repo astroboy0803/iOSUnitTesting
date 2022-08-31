@@ -1,5 +1,5 @@
-import XCTest
 @testable import LoadViewController
+import XCTest
 
 class StoryboardBasedViewControllerTests: XCTestCase {
     func test_loading() {

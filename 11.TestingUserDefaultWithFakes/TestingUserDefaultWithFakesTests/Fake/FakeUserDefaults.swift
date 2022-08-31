@@ -6,7 +6,7 @@ class FakeUserDefaults: UserDefaultProtocol {
     func set(_ value: Int, forKey defaultName: String) {
         integers[defaultName] = value
     }
-    
+
     func integer(forKey defaultName: String) -> Int {
         integers[defaultName] ?? .zero
     }

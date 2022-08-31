@@ -1,31 +1,30 @@
-import XCTest
-import ViewControllerPresentationSpy
 @testable import TestingNavigation
+import ViewControllerPresentationSpy
+import XCTest
 
 class ViewControllerTests: XCTestCase {
-    
     var sut: ViewController!
-    
+
     override func setUp() {
         super.setUp()
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(identifier: String(describing: ViewController.self))
         sut.loadViewIfNeeded()
     }
-    
+
     override func tearDown() {
         executeRunLoop()
         sut = nil
         super.tearDown()
     }
-    
+
     func test_outlets_shouldBeConnected() {
         XCTAssertNotNil(sut.codePushButton, "Code Push Button")
         XCTAssertNotNil(sut.codeModalButton, "Code Modal Button")
         XCTAssertNotNil(sut.seguePushButton, "Segue Push Button")
         XCTAssertNotNil(sut.segueModalButton, "Segue Modal Button")
     }
-    
+
     func test_NavigationPushAnimated_shouldTrue() {
         let spyNav = SpyNavigationController(rootViewController: sut)
         XCTAssertNotNil(sut.navigationController)
@@ -34,19 +33,19 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(spyNav.pushViewControllerArgsAnimated.last)
         XCTAssertTrue(spyNav.pushViewControllerArgsAnimated.last!, "Navigation animated flag")
     }
-        
+
     func test_tappingCodePushButton_shouldPushCodeNextViewController() {
         // StoryBoard的embed navigation必須使用stroyboard的方式叫起viewcontroller才會有效
         // 以程式找出在stroyboard的viewcontroller並初始化的方式是不會embed navigation
         // 也就是說 viewcontroller的navigationController property為nil
-        
+
         XCTAssertNil(sut.navigationController)
         let nav = UINavigationController(rootViewController: sut)
         XCTAssertNotNil(sut.navigationController)
         tap(sut.codePushButton)
         executeRunLoop()
         XCTAssertEqual(nav.viewControllers.count, 2, "navigation stack")
-        
+
         guard
             let pushedVC = nav.viewControllers.last,
             let codeNextVC = pushedVC as? CodeNextViewController
@@ -56,7 +55,7 @@ class ViewControllerTests: XCTestCase {
         }
         XCTAssertEqual(codeNextVC.label.text, "Pushed from code")
     }
-    
+
     func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController() {
         // 要能夠正常的present, viewController必須在目前的window hierarchy中
         UIApplication.shared.windows.first?.rootViewController = sut
@@ -71,14 +70,14 @@ class ViewControllerTests: XCTestCase {
         }
         XCTAssertEqual(codeNextVC.label.text, "Modal from code")
     }
-    
+
     func test_tappingCodeModalButton_shouldPresentCodeNextViewController() {
         let presentationVerifier = PresentationVerifier()
         tap(sut.codeModalButton)
         let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
     }
-    
+
     func test_tappingSeguePushButton() {
         let presentationVerifier = PresentationVerifier()
         putInWindow(sut)
@@ -86,7 +85,7 @@ class ViewControllerTests: XCTestCase {
         let segueNextVC: SegueNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)
         XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
     }
-    
+
     func test_tappingSegueModalButton_shouldShowSegueNextViewController() {
         // 無法順利將兩個viewcontroller給釋放掉
         let presentationVerifier = PresentationVerifier()
@@ -110,12 +109,11 @@ class TestableViewController: ViewController {
     var presentArgsViewController: [UIViewController] = []
     var presentArgsAnimated: [Bool] = []
     var presentArgsClosure: [(() -> Void)?] = []
-    
+
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         presentCallCount += 1
         presentArgsViewController.append(viewControllerToPresent)
         presentArgsAnimated.append(flag)
         presentArgsClosure.append(completion)
     }
-    
 }

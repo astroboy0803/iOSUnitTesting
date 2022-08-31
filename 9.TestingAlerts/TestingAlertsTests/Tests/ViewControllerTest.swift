@@ -1,13 +1,12 @@
-import XCTest
-import ViewControllerPresentationSpy
 @testable import TestingAlerts
+import ViewControllerPresentationSpy
+import XCTest
 
 class ViewControllerTest: XCTestCase {
-    
     private var sut: ViewController!
 
     private var alertVerifier: AlertVerifier!
-    
+
     override func setUp() {
         super.setUp()
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -15,20 +14,20 @@ class ViewControllerTest: XCTestCase {
         sut.loadViewIfNeeded()
         alertVerifier = .init()
     }
-    
+
     override func tearDown() {
         sut = nil
         alertVerifier = nil
         super.tearDown()
     }
-    
+
     func test_outlets_shouldBeConnected() {
         XCTAssertNotNil(sut.button, "button")
     }
-    
+
     func test_tappingButton() {
         tap(sut.button)
-        
+
         // verify就會做驗證
         // 有沒有alert被present
         // title和message是否一致
@@ -46,7 +45,7 @@ class ViewControllerTest: XCTestCase {
         )
         XCTAssertEqual(alertVerifier.preferredAction?.title, "OK", "preferred action")
     }
-    
+
     func test_executeAlertAction_withOKButton() {
         tap(sut.button)
         do {
@@ -56,7 +55,7 @@ class ViewControllerTest: XCTestCase {
             XCTFail("not found OK button")
         }
     }
-    
+
     func test_executeAlertAction_withCancelButton() {
         tap(sut.button)
         do {

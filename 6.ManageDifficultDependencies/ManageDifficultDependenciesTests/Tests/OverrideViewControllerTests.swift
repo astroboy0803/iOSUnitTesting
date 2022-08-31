@@ -1,5 +1,5 @@
-import XCTest
 @testable import ManageDifficultDependencies
+import XCTest
 
 private class TestableOverrideViewController: OverrideViewController {
     override func analytics() -> Analytics {

@@ -1,8 +1,7 @@
-import XCTest
 @testable import ManageDifficultDependencies
+import XCTest
 
 class ClosureInitializerViewControllerTests: XCTestCase {
-    
     func test_viewDidAppear() {
         let sut = ClosureInitializerViewController {
             .init()

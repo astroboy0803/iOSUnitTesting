@@ -1,22 +1,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet private(set) var button: UIButton!
-    
+
     var session: URLSessionProtocol = URLSession.shared
-    
+
     private var dataTask: URLSessionDataTask?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction private func buttonTapped() {
         // 註解, 重複發送, 網址 = 測試failure
         searchForBook(terms: "out from boneville")
     }
-    
+
     private func searchForBook(terms: String) {
         guard
             let encodedTerms = terms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
             print("response: \(String(describing: response))")
             print("data: \(decoded)")
             print("error: \(String(describing: error))")
-            
+
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {
                     return
@@ -51,6 +50,4 @@ protocol URLSessionProtocol {
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
 
-extension URLSession: URLSessionProtocol {
-    
-}
+extension URLSession: URLSessionProtocol {}
