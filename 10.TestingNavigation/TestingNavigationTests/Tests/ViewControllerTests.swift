@@ -40,6 +40,7 @@ class ViewControllerTests: XCTestCase {
         // 也就是說 viewcontroller的navigationController property為nil
 
         XCTAssertNil(sut.navigationController)
+        // 如果要驗證 animated flag, UINavigationController -> SpyNavigationController
         let nav = UINavigationController(rootViewController: sut)
         XCTAssertNotNil(sut.navigationController)
         tap(sut.codePushButton)
@@ -72,6 +73,7 @@ class ViewControllerTests: XCTestCase {
     }
 
     func test_tappingCodeModalButton_shouldPresentCodeNextViewController() {
+        let diss = DismissalVerifier()
         let presentationVerifier = PresentationVerifier()
         tap(sut.codeModalButton)
         let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)
@@ -100,6 +102,13 @@ class SpyNavigationController: UINavigationController {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: animated)
         pushViewControllerArgsAnimated.append(animated)
+    }
+    
+    override func popViewController(animated: Bool) -> UIViewController? {
+        defer {
+            _ = pushViewControllerArgsAnimated.dropLast()
+        }
+        return super.popViewController(animated: animated)
     }
 }
 

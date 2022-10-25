@@ -76,8 +76,16 @@ class AssertYourSelfTests: XCTestCase {
     }
 
     func test_floatingPointFixed() {
-        let result = 0.2 + 0.2
-        XCTAssertEqual(result, 0.3, accuracy: 0.101)
+        let result = 0.1 + 0.2
+//        XCTAssertEqual(result, 0.3)
+        // result因浮點數溢位問題 = 0.30000000000000004
+        // result - 0.3 = 0.00000000000000004
+        // 所以accuracy > 0.00000000000000004 = success
+        // 反之 fail
+//        XCTAssertEqual(result, 0.3, accuracy: 0.00000000000000003)
+//        XCTAssertEqual(result, 0.3, accuracy: 0.00000000000000004)
+        XCTAssertEqual(result, 0.3, accuracy: 0.0000000000000000556)
+//        XCTAssertEqual(result, 0.3, accuracy: 0.00000000000000006)
     }
 
     func test_messageOverkill() {

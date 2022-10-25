@@ -7,6 +7,12 @@ class TestingAppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print(">> Launching with testing app delegate")
 
+        // Remove any cached scene configurations to ensure that TestingAppDelegate.application(_:configurationForConnecting:options:) is called
+        // TestingSceneDelegate will be used when running unit tests.
+        // NOTE: THIS IS PRIVATE API AND MAY BREAK IN THE FUTURE!
+        // 模擬器測試結果:
+        // iOS 13和14會進迴圈清除cache
+        // 但iOS 15的openSessions為0, 不會進去執行
         for sceneSession in application.openSessions {
             application.perform(Selector(("_removeSessionFromSessionSet:")), with: sceneSession)
         }
