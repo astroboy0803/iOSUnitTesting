@@ -73,7 +73,6 @@ class ViewControllerTests: XCTestCase {
     }
 
     func test_tappingCodeModalButton_shouldPresentCodeNextViewController() {
-        let diss = DismissalVerifier()
         let presentationVerifier = PresentationVerifier()
         tap(sut.codeModalButton)
         let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)

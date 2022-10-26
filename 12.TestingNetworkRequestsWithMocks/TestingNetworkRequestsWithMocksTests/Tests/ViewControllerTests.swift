@@ -23,6 +23,10 @@ class ViewControllerTests: XCTestCase {
     func test_tappingButton_shouldMakeDataTaskToSearchForEBookOutFromBoneville() {
         let mockURLSession = MockURLSession()
         sut.session = mockURLSession
+        
+        // Wanted but no invoked: dataTask(with:completionHandler:)
+//        mockURLSession.verifyDataTask(with: .init(url: .init(string: "https://itunes.apple.com/search?media=ebook&term=out%20from%20boneville")!))
+        
         tap(sut.button)
 
         mockURLSession.verifyDataTask(with: .init(url: .init(string: "https://itunes.apple.com/search?media=ebook&term=out%20from%20boneville")!))

@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBAction private func buttonTapped() {
         // 註解, 重複發送, 網址 = 測試failure
         searchForBook(terms: "out from boneville")
+        
+        // Wanted 1 time but was called 2 times...
+        //searchForBook(terms: "out from boneville222")
     }
 
     private func searchForBook(terms: String) {
