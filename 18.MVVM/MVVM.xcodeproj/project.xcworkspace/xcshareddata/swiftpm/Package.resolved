@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-snapshot-test-case",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uber/ios-snapshot-test-case.git",
+      "state" : {
+        "revision" : "7b10770333a961be6e5a41c9ce04b8c6d3990126",
+        "version" : "8.0.0"
+      }
+    },
+    {
+      "identity" : "viewcontrollerpresentationspy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonreid/ViewControllerPresentationSpy",
+      "state" : {
+        "revision" : "34c42a620cea5408a3d7d1fd05a6d52037f4cb51",
+        "version" : "6.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
