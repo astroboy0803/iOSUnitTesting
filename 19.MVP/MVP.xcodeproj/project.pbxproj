@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2062CA32291E21CB00B8970E /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA2F291E21CB00B8970E /* TestingAppDelegate.swift */; };
+		2062CA33291E21CB00B8970E /* TestingRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA30291E21CB00B8970E /* TestingRootViewController.swift */; };
+		2062CA34291E21CB00B8970E /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA31291E21CB00B8970E /* TestingSceneDelegate.swift */; };
+		2062CA37291E21DC00B8970E /* ButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA35291E21DC00B8970E /* ButtonHelper.swift */; };
+		2062CA38291E21DC00B8970E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA36291E21DC00B8970E /* TestHelpers.swift */; };
+		2062CA3A291E21F000B8970E /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA39291E21F000B8970E /* MockPasswordChanger.swift */; };
+		2062CA3C291E21F900B8970E /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA3B291E21F900B8970E /* ChangePasswordViewControllerSnapshotTests.swift */; };
+		2062CA3F291E220400B8970E /* ChangePasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA3D291E220400B8970E /* ChangePasswordViewControllerTests.swift */; };
+		2062CA40291E220400B8970E /* AppLaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA3E291E220400B8970E /* AppLaunchTest.swift */; };
+		2062CA48291E22DA00B8970E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA46291E22DA00B8970E /* ChangePasswordViewController.swift */; };
+		2062CA49291E22DA00B8970E /* ChangePasswordLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA47291E22DA00B8970E /* ChangePasswordLabels.swift */; };
+		2062CA4C291E22F800B8970E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA4A291E22F800B8970E /* main.swift */; };
+		2062CA4D291E22F800B8970E /* PasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062CA4B291E22F800B8970E /* PasswordChanger.swift */; };
+		2077B7F9291E1BEF0067DDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077B7F8291E1BEF0067DDC4 /* AppDelegate.swift */; };
+		2077B7FB291E1BEF0067DDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077B7FA291E1BEF0067DDC4 /* SceneDelegate.swift */; };
+		2077B7FD291E1BEF0067DDC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077B7FC291E1BEF0067DDC4 /* ViewController.swift */; };
+		2077B800291E1BEF0067DDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2077B7FE291E1BEF0067DDC4 /* Main.storyboard */; };
+		2077B802291E1BF00067DDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2077B801291E1BF00067DDC4 /* Assets.xcassets */; };
+		2077B805291E1BF00067DDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2077B803291E1BF00067DDC4 /* LaunchScreen.storyboard */; };
+		20DD5F3B291E1F8600C9C635 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 20DD5F3A291E1F8600C9C635 /* ViewControllerPresentationSpy */; };
+		20DD5F3E291E1F9800C9C635 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 20DD5F3D291E1F9800C9C635 /* iOSSnapshotTestCase */; };
+		20E4477D291E2D0700791469 /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4477C291E2D0700791469 /* ChangePasswordViewCommands.swift */; };
+		20E44780291E2D7A00791469 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4477F291E2D7A00791469 /* ChangePasswordPresenter.swift */; };
+		20E44782291E546E00791469 /* PasswordInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E44781291E546E00791469 /* PasswordInputs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2077B80C291E1BF00067DDC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2077B7ED291E1BEF0067DDC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2077B7F4291E1BEF0067DDC4;
+			remoteInfo = MVP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2062CA2F291E21CB00B8970E /* TestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		2062CA30291E21CB00B8970E /* TestingRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingRootViewController.swift; sourceTree = "<group>"; };
+		2062CA31291E21CB00B8970E /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
+		2062CA35291E21DC00B8970E /* ButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHelper.swift; sourceTree = "<group>"; };
+		2062CA36291E21DC00B8970E /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		2062CA39291E21F000B8970E /* MockPasswordChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
+		2062CA3B291E21F900B8970E /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		2062CA3D291E220400B8970E /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
+		2062CA3E291E220400B8970E /* AppLaunchTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLaunchTest.swift; sourceTree = "<group>"; };
+		2062CA46291E22DA00B8970E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		2062CA47291E22DA00B8970E /* ChangePasswordLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordLabels.swift; sourceTree = "<group>"; };
+		2062CA4A291E22F800B8970E /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2062CA4B291E22F800B8970E /* PasswordChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChanger.swift; sourceTree = "<group>"; };
+		2077B7F5291E1BEF0067DDC4 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2077B7F8291E1BEF0067DDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2077B7FA291E1BEF0067DDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2077B7FC291E1BEF0067DDC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2077B7FF291E1BEF0067DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2077B801291E1BF00067DDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2077B804291E1BF00067DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2077B806291E1BF00067DDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2077B80B291E1BF00067DDC4 /* MVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E4477C291E2D0700791469 /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
+		20E4477F291E2D7A00791469 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		20E44781291E546E00791469 /* PasswordInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2077B7F2291E1BEF0067DDC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2077B808291E1BF00067DDC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DD5F3E291E1F9800C9C635 /* iOSSnapshotTestCase in Frameworks */,
+				20DD5F3B291E1F8600C9C635 /* ViewControllerPresentationSpy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2062CA41291E222300B8970E /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				20E4477E291E2D2E00791469 /* Presenter */,
+				2062CA46291E22DA00B8970E /* ChangePasswordViewController.swift */,
+				2062CA47291E22DA00B8970E /* ChangePasswordLabels.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		2077B7EC291E1BEF0067DDC4 = {
+			isa = PBXGroup;
+			children = (
+				2077B7F7291E1BEF0067DDC4 /* MVP */,
+				2077B80E291E1BF00067DDC4 /* MVPTests */,
+				2077B7F6291E1BEF0067DDC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2077B7F6291E1BEF0067DDC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2077B7F5291E1BEF0067DDC4 /* MVP.app */,
+				2077B80B291E1BF00067DDC4 /* MVPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2077B7F7291E1BEF0067DDC4 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA4A291E22F800B8970E /* main.swift */,
+				2077B7F8291E1BEF0067DDC4 /* AppDelegate.swift */,
+				2077B7FA291E1BEF0067DDC4 /* SceneDelegate.swift */,
+				2077B7FC291E1BEF0067DDC4 /* ViewController.swift */,
+				2062CA41291E222300B8970E /* ChangePassword */,
+				2062CA4B291E22F800B8970E /* PasswordChanger.swift */,
+				20E44781291E546E00791469 /* PasswordInputs.swift */,
+				2077B7FE291E1BEF0067DDC4 /* Main.storyboard */,
+				2077B801291E1BF00067DDC4 /* Assets.xcassets */,
+				2077B803291E1BF00067DDC4 /* LaunchScreen.storyboard */,
+				2077B806291E1BF00067DDC4 /* Info.plist */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		2077B80E291E1BF00067DDC4 /* MVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				20DD5F38291E1F5C00C9C635 /* ByPassDelegate */,
+				20DD5F37291E1F5400C9C635 /* Helpers */,
+				20DD5F36291E1F4E00C9C635 /* Mocks */,
+				20DD5F35291E1F4200C9C635 /* SnapshotTests */,
+				20DD5F34291E1F3C00C9C635 /* Tests */,
+			);
+			path = MVPTests;
+			sourceTree = "<group>";
+		};
+		20DD5F34291E1F3C00C9C635 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA3E291E220400B8970E /* AppLaunchTest.swift */,
+				2062CA3D291E220400B8970E /* ChangePasswordViewControllerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		20DD5F35291E1F4200C9C635 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA3B291E21F900B8970E /* ChangePasswordViewControllerSnapshotTests.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		20DD5F36291E1F4E00C9C635 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA39291E21F000B8970E /* MockPasswordChanger.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		20DD5F37291E1F5400C9C635 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA35291E21DC00B8970E /* ButtonHelper.swift */,
+				2062CA36291E21DC00B8970E /* TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		20DD5F38291E1F5C00C9C635 /* ByPassDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2062CA2F291E21CB00B8970E /* TestingAppDelegate.swift */,
+				2062CA30291E21CB00B8970E /* TestingRootViewController.swift */,
+				2062CA31291E21CB00B8970E /* TestingSceneDelegate.swift */,
+			);
+			path = ByPassDelegate;
+			sourceTree = "<group>";
+		};
+		20E4477E291E2D2E00791469 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				20E4477C291E2D0700791469 /* ChangePasswordViewCommands.swift */,
+				20E4477F291E2D7A00791469 /* ChangePasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2077B7F4291E1BEF0067DDC4 /* MVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2077B81F291E1BF00067DDC4 /* Build configuration list for PBXNativeTarget "MVP" */;
+			buildPhases = (
+				2077B7F1291E1BEF0067DDC4 /* Sources */,
+				2077B7F2291E1BEF0067DDC4 /* Frameworks */,
+				2077B7F3291E1BEF0067DDC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVP;
+			productName = MVP;
+			productReference = 2077B7F5291E1BEF0067DDC4 /* MVP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2077B80A291E1BF00067DDC4 /* MVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2077B822291E1BF00067DDC4 /* Build configuration list for PBXNativeTarget "MVPTests" */;
+			buildPhases = (
+				2077B807291E1BF00067DDC4 /* Sources */,
+				2077B808291E1BF00067DDC4 /* Frameworks */,
+				2077B809291E1BF00067DDC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2077B80D291E1BF00067DDC4 /* PBXTargetDependency */,
+			);
+			name = MVPTests;
+			packageProductDependencies = (
+				20DD5F3A291E1F8600C9C635 /* ViewControllerPresentationSpy */,
+				20DD5F3D291E1F9800C9C635 /* iOSSnapshotTestCase */,
+			);
+			productName = MVPTests;
+			productReference = 2077B80B291E1BF00067DDC4 /* MVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2077B7ED291E1BEF0067DDC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					2077B7F4291E1BEF0067DDC4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					2077B80A291E1BF00067DDC4 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+						TestTargetID = 2077B7F4291E1BEF0067DDC4;
+					};
+				};
+			};
+			buildConfigurationList = 2077B7F0291E1BEF0067DDC4 /* Build configuration list for PBXProject "MVP" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2077B7EC291E1BEF0067DDC4;
+			packageReferences = (
+				20DD5F39291E1F8600C9C635 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */,
+				20DD5F3C291E1F9800C9C635 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+			);
+			productRefGroup = 2077B7F6291E1BEF0067DDC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2077B7F4291E1BEF0067DDC4 /* MVP */,
+				2077B80A291E1BF00067DDC4 /* MVPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2077B7F3291E1BEF0067DDC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2077B805291E1BF00067DDC4 /* LaunchScreen.storyboard in Resources */,
+				2077B802291E1BF00067DDC4 /* Assets.xcassets in Resources */,
+				2077B800291E1BEF0067DDC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2077B809291E1BF00067DDC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2077B7F1291E1BEF0067DDC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2062CA49291E22DA00B8970E /* ChangePasswordLabels.swift in Sources */,
+				2077B7FD291E1BEF0067DDC4 /* ViewController.swift in Sources */,
+				20E4477D291E2D0700791469 /* ChangePasswordViewCommands.swift in Sources */,
+				2062CA4C291E22F800B8970E /* main.swift in Sources */,
+				2062CA48291E22DA00B8970E /* ChangePasswordViewController.swift in Sources */,
+				20E44782291E546E00791469 /* PasswordInputs.swift in Sources */,
+				2077B7F9291E1BEF0067DDC4 /* AppDelegate.swift in Sources */,
+				20E44780291E2D7A00791469 /* ChangePasswordPresenter.swift in Sources */,
+				2062CA4D291E22F800B8970E /* PasswordChanger.swift in Sources */,
+				2077B7FB291E1BEF0067DDC4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2077B807291E1BF00067DDC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2062CA3C291E21F900B8970E /* ChangePasswordViewControllerSnapshotTests.swift in Sources */,
+				2062CA34291E21CB00B8970E /* TestingSceneDelegate.swift in Sources */,
+				2062CA38291E21DC00B8970E /* TestHelpers.swift in Sources */,
+				2062CA37291E21DC00B8970E /* ButtonHelper.swift in Sources */,
+				2062CA32291E21CB00B8970E /* TestingAppDelegate.swift in Sources */,
+				2062CA3F291E220400B8970E /* ChangePasswordViewControllerTests.swift in Sources */,
+				2062CA33291E21CB00B8970E /* TestingRootViewController.swift in Sources */,
+				2062CA3A291E21F000B8970E /* MockPasswordChanger.swift in Sources */,
+				2062CA40291E220400B8970E /* AppLaunchTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2077B80D291E1BF00067DDC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2077B7F4291E1BEF0067DDC4 /* MVP */;
+			targetProxy = 2077B80C291E1BF00067DDC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2077B7FE291E1BEF0067DDC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2077B7FF291E1BEF0067DDC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2077B803291E1BF00067DDC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2077B804291E1BF00067DDC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2077B81D291E1BF00067DDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2077B81E291E1BF00067DDC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2077B820291E1BF00067DDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.BruceHuang.MVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2077B821291E1BF00067DDC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.BruceHuang.MVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2077B823291E1BF00067DDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.BruceHuang.MVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVP";
+			};
+			name = Debug;
+		};
+		2077B824291E1BF00067DDC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.BruceHuang.MVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2077B7F0291E1BEF0067DDC4 /* Build configuration list for PBXProject "MVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2077B81D291E1BF00067DDC4 /* Debug */,
+				2077B81E291E1BF00067DDC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2077B81F291E1BF00067DDC4 /* Build configuration list for PBXNativeTarget "MVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2077B820291E1BF00067DDC4 /* Debug */,
+				2077B821291E1BF00067DDC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2077B822291E1BF00067DDC4 /* Build configuration list for PBXNativeTarget "MVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2077B823291E1BF00067DDC4 /* Debug */,
+				2077B824291E1BF00067DDC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20DD5F39291E1F8600C9C635 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonreid/ViewControllerPresentationSpy";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		20DD5F3C291E1F9800C9C635 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20DD5F3A291E1F8600C9C635 /* ViewControllerPresentationSpy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DD5F39291E1F8600C9C635 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
+			productName = ViewControllerPresentationSpy;
+		};
+		20DD5F3D291E1F9800C9C635 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DD5F3C291E1F9800C9C635 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2077B7ED291E1BEF0067DDC4 /* Project object */;
+}
